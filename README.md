@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 WanderStay
 
 WanderStay is a full-stack travel and accommodation booking web application inspired by Airbnb. Users can explore listings, create their own stays, edit property details, and manage bookings through a clean and responsive interface.
