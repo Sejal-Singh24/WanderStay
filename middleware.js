@@ -40,7 +40,7 @@ module.exports.validateListing = (req, res, next) => {
   if(error) {
     let errMsg = error.details.map((el) => el.message).join(",");
     // throw new ExpressError(400, errMsg);
-    console.log("Joi Validation Error:", errMsg); // 👈 Yeh line aapko terminal mein batayegi kya dikkat hai
+    console.log("Joi Validation Error:", errMsg); 
     req.flash("error", errMsg);
     return res.redirect("/listings");
   } else {

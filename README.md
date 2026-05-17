@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 WanderStay
 
 WanderStay is a full-stack travel and accommodation booking web application inspired by Airbnb. Users can explore listings, create their own stays, edit property details, and manage bookings through a clean and responsive interface.
@@ -126,3 +127,6 @@ GitHub: [https://github.com/Sejal-Singh24](https://github.com/Sejal-Singh24)
 Repository Link
 
 [https://github.com/Sejal-Singh24/WanderStay](https://github.com/Sejal-Singh24/WanderStay)
+=======
+# WanderStay
+>>>>>>> 2511a9ad535a9922bdbbf42738662623a34a6456

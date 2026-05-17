@@ -56,17 +56,11 @@ const sessionOptions = {
   resave: false,
   saveUninitialized: true,
   cookie: {
-    expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
-    maxAge: 7 * 24 * 60 * 1000,
+    expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
+    maxAge: 7 * 24 * 60 * 60 * 1000,
     httpOnly: true,
   },
 };
-
-// app.get("/", (req, res) => {
-//   res.redirect("/listings");
-// });
-
-
 
 app.use(session(sessionOptions));
 app.use(flash());
@@ -85,16 +79,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.get("/demouser", async (req, res) => {
-//   let fakeUser = new User ({
-//     email: "student@gmail.com",
-//     username: "delta-student"
-//   });
-
-//   let registeredUser = await User.register(fakeUser, "helloworld"); 
-//   res.send(registeredUser);
-// })
-
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
@@ -109,6 +93,6 @@ app.use((err, req, res, next) => {
   // res.status(statusCode).send(message);
 });
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log("server running on port 8080");
 });
